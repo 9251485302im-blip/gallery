@@ -1,8 +1,14 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Галерея в кабинете</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Golos+Text:wght@400;500&display=swap">
 <style>
+
 /* Layout: a dark gallery wall; the painting hangs in the upper field, a museum label sits on the wall below, alternating sides. */
 :root{
   --wall:#0b0a09;          /* near-black wall: on OLED these pixels stay off */
@@ -53,6 +59,9 @@ body{font-family:var(--body);cursor:none;
 }
 @media (prefers-reduced-motion:reduce){.frame,.label{-webkit-transition:none;transition:none}}
 </style>
+</head>
+<body>
+
 
 <div id="stage">
   <div class="frame" id="f0"><img id="i0" alt=""></div>
@@ -154,3 +163,6 @@ var ART = [{"f": "img/001.jpg", "a": "Андрей Рублёв", "t": "Трои
   show(1);
 })();
 </script>
+
+</body>
+</html>
