@@ -1,0 +1,156 @@
+<title>Галерея в кабинете</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Golos+Text:wght@400;500&display=swap">
+<style>
+/* Layout: a dark gallery wall; the painting hangs in the upper field, a museum label sits on the wall below, alternating sides. */
+:root{
+  --wall:#0b0a09;          /* near-black wall: on OLED these pixels stay off */
+  --wall-glow:#16130f;     /* faint warm light around the painting */
+  --label-ink:#e9e1d3;     /* label text, warm paper white */
+  --label-dim:#9c9284;     /* secondary label text */
+  --brass:#b39563;         /* the brass rule on the label */
+  --display:"Cormorant Garamond","Georgia","Times New Roman",serif;
+  --body:"Golos Text","Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif;
+  color-scheme:dark;
+}
+html,body{height:100%;margin:0;background:var(--wall);color:var(--label-ink);overflow:hidden}
+body{font-family:var(--body);cursor:none;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));box-sizing:border-box}
+#stage{position:absolute;left:0;right:0;top:0;bottom:0;
+  background:radial-gradient(ellipse at 50% 42%,var(--wall-glow) 0%,var(--wall) 62%)}
+.frame{position:absolute;left:3vw;right:3vw;top:5.5vh;bottom:18vh;
+  opacity:0;-webkit-transition:opacity 2.4s ease;transition:opacity 2.4s ease}
+.frame.on{opacity:1}
+.frame img{position:absolute;left:0;top:0;width:100%;height:100%;
+  object-fit:contain;max-width:100%;
+  -webkit-filter:drop-shadow(0 1.2vh 2.4vh rgba(0,0,0,.65));filter:drop-shadow(0 1.2vh 2.4vh rgba(0,0,0,.65))}
+.label{position:absolute;bottom:3.2vh;max-width:58vw;
+  opacity:0;-webkit-transition:opacity 1.6s ease .9s;transition:opacity 1.6s ease .9s}
+.label.on{opacity:1}
+.label.left{left:4.5vw;text-align:left}
+.label.right{right:4.5vw;text-align:right}
+.label .author{font-family:var(--body);font-weight:500;font-size:2.5vh;letter-spacing:.08em;text-transform:uppercase;color:var(--label-ink)}
+.label .rule{height:2px;width:5vh;background:var(--brass);margin:1.1vh 0 1.2vh}
+.label.right .rule{margin-left:auto}
+.label .title{font-family:var(--display);font-style:italic;font-weight:500;font-size:3.9vh;line-height:1.08;color:var(--label-ink)}
+.label .meta{font-family:var(--body);font-size:1.75vh;margin-top:1vh;color:var(--label-dim);letter-spacing:.02em}
+.label .meta b{font-weight:500;color:var(--label-ink);font-variant-numeric:tabular-nums}
+#hint{position:absolute;top:1.6vh;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);
+  font-size:1.6vh;color:var(--label-dim);letter-spacing:.04em;white-space:nowrap;
+  opacity:1;-webkit-transition:opacity 1.2s ease;transition:opacity 1.2s ease}
+#hint.off{opacity:0}
+#hint kbd{font-family:var(--body);border:1px solid var(--label-dim);border-radius:3px;padding:0 .5vh;margin:0 .3vh;color:var(--label-ink)}
+#count{position:absolute;bottom:3.4vh;font-size:1.4vh;color:#5d564c;font-variant-numeric:tabular-nums;letter-spacing:.06em}
+#count.left{left:4.5vw}#count.right{right:4.5vw}
+@media (max-width:700px){
+  .frame{left:12px;right:12px;bottom:22vh}
+  .label{max-width:calc(100% - 32px)}
+  .label.left,.label.right{left:16px;right:16px;text-align:left}
+  .label.right .rule{margin-left:0}
+  #count{display:none}
+  #hint{display:none}
+}
+@media (prefers-reduced-motion:reduce){.frame,.label{-webkit-transition:none;transition:none}}
+</style>
+
+<div id="stage">
+  <div class="frame" id="f0"><img id="i0" alt=""></div>
+  <div class="frame" id="f1"><img id="i1" alt=""></div>
+  <div class="label left" id="lab">
+    <div class="author" id="la"></div>
+    <div class="rule"></div>
+    <div class="title" id="lt"></div>
+    <div class="meta" id="lm"></div>
+  </div>
+  <div id="count" class="right"></div>
+  <div id="hint">Смена картины раз в 5 минут &nbsp;·&nbsp; <kbd>◀</kbd><kbd>▶</kbd> листать &nbsp;·&nbsp; <kbd>OK</kbd> скрыть подпись &nbsp;·&nbsp; щелчок — во весь экран</div>
+</div>
+
+<script>
+var ART = [{"f": "img/001.jpg", "a": "Андрей Рублёв", "t": "Троица", "y": "1420-е", "m": "Третьяковская галерея, Москва"}, {"f": "img/002.jpg", "a": "Ян ван Эйк", "t": "Портрет мужчины в красном тюрбане", "y": "1433", "m": "Лондонская национальная галерея"}, {"f": "img/003.jpg", "a": "Ян ван Эйк", "t": "Портрет четы Арнольфини", "y": "1434", "m": "Лондонская национальная галерея"}, {"f": "img/004.jpg", "a": "Хуберт и Ян ван Эйк", "t": "Гентский алтарь", "y": "1432", "m": "Собор Святого Бавона, Гент"}, {"f": "img/005.jpg", "a": "Рогир ван дер Вейден", "t": "Снятие с креста", "y": "ок. 1435", "m": "Прадо, Мадрид"}, {"f": "img/006.jpg", "a": "Леонардо да Винчи", "t": "Портрет Джиневры де Бенчи", "y": "ок. 1474–1478", "m": "Национальная галерея искусства, Вашингтон"}, {"f": "img/007.jpg", "a": "Сандро Боттичелли", "t": "Весна", "y": "ок. 1480", "m": "Галерея Уффици, Флоренция"}, {"f": "img/008.jpg", "a": "Сандро Боттичелли", "t": "Рождение Венеры", "y": "ок. 1485", "m": "Галерея Уффици, Флоренция"}, {"f": "img/009.jpg", "a": "Леонардо да Винчи", "t": "Дама с горностаем", "y": "1489–1491", "m": "Национальный музей, Краков"}, {"f": "img/010.jpg", "a": "Леонардо да Винчи", "t": "Тайная вечеря", "y": "1495–1498", "m": "Санта-Мария-делле-Грацие, Милан"}, {"f": "img/011.jpg", "a": "Иероним Босх", "t": "Сад земных наслаждений", "y": "ок. 1490–1510", "m": "Прадо, Мадрид"}, {"f": "img/012.jpg", "a": "Альбрехт Дюрер", "t": "Автопортрет в одежде, отороченной мехом", "y": "1500", "m": "Старая пинакотека, Мюнхен"}, {"f": "img/013.jpg", "a": "Леонардо да Винчи", "t": "Мона Лиза (Джоконда)", "y": "1503–1519", "m": "Лувр, Париж"}, {"f": "img/014.jpg", "a": "Джорджоне", "t": "Гроза", "y": "ок. 1508", "m": "Галерея Академии, Венеция"}, {"f": "img/015.jpg", "a": "Рафаэль Санти", "t": "Афинская школа", "y": "1509–1511", "m": "Станцы Рафаэля, Ватикан"}, {"f": "img/016.jpg", "a": "Микеланджело Буонарроти", "t": "Сотворение Адама", "y": "ок. 1512", "m": "Сикстинская капелла, Ватикан"}, {"f": "img/017.jpg", "a": "Рафаэль Санти", "t": "Сикстинская мадонна", "y": "1512–1513", "m": "Галерея старых мастеров, Дрезден"}, {"f": "img/018.jpg", "a": "Альбрехт Альтдорфер", "t": "Битва Александра при Иссе", "y": "1529", "m": "Старая пинакотека, Мюнхен"}, {"f": "img/019.jpg", "a": "Тициан", "t": "Венера Урбинская", "y": "1534", "m": "Галерея Уффици, Флоренция"}, {"f": "img/020.jpg", "a": "Питер Брейгель Старший", "t": "Нидерландские пословицы", "y": "1559", "m": "Картинная галерея, Берлин"}, {"f": "img/021.jpg", "a": "Питер Брейгель Старший", "t": "Охотники на снегу", "y": "1565", "m": "Музей истории искусств, Вена"}, {"f": "img/022.jpg", "a": "Питер Брейгель Старший", "t": "Крестьянская свадьба", "y": "1567", "m": "Музей истории искусств, Вена"}, {"f": "img/023.jpg", "a": "Микеланджело Меризи да Караваджо", "t": "Корзина с фруктами", "y": "ок. 1599", "m": "Пинакотека Амброзиана, Милан"}, {"f": "img/024.jpg", "a": "Микеланджело Меризи да Караваджо", "t": "Призвание апостола Матфея", "y": "1599–1600", "m": "Сан-Луиджи-деи-Франчези, Рим"}, {"f": "img/025.jpg", "a": "Питер Пауль Рубенс", "t": "Воздвижение креста", "y": "1610–1611", "m": "Собор Антверпенской Богоматери"}, {"f": "img/026.jpg", "a": "Франс Халс", "t": "Смеющийся кавалер", "y": "1624", "m": "Собрание Уоллеса, Лондон"}, {"f": "img/027.jpg", "a": "Рембрандт ван Рейн", "t": "Урок анатомии доктора Тульпа", "y": "1632", "m": "Маурицхёйс, Гаага"}, {"f": "img/028.jpg", "a": "Диего Веласкес", "t": "Сдача Бреды", "y": "1634–1635", "m": "Прадо, Мадрид"}, {"f": "img/029.jpg", "a": "Никола Пуссен", "t": "Аркадские пастухи", "y": "1637–1638", "m": "Лувр, Париж"}, {"f": "img/030.jpg", "a": "Рембрандт ван Рейн", "t": "Ночной дозор", "y": "1642", "m": "Рейксмюсеум, Амстердам"}, {"f": "img/031.jpg", "a": "Диего Веласкес", "t": "Менины", "y": "1656", "m": "Прадо, Мадрид"}, {"f": "img/032.jpg", "a": "Ян Вермеер", "t": "Молочница", "y": "ок. 1658", "m": "Рейксмюсеум, Амстердам"}, {"f": "img/033.jpg", "a": "Ян Вермеер", "t": "Вид Делфта", "y": "ок. 1660–1661", "m": "Маурицхёйс, Гаага"}, {"f": "img/034.jpg", "a": "Ян Вермеер", "t": "Девушка с жемчужной серёжкой", "y": "ок. 1665", "m": "Маурицхёйс, Гаага"}, {"f": "img/035.jpg", "a": "Рембрандт ван Рейн", "t": "Еврейская невеста", "y": "ок. 1665–1669", "m": "Рейксмюсеум, Амстердам"}, {"f": "img/036.jpg", "a": "Ян Вермеер", "t": "Аллегория живописи", "y": "ок. 1666–1668", "m": "Музей истории искусств, Вена"}, {"f": "img/037.jpg", "a": "Рембрандт ван Рейн", "t": "Возвращение блудного сына", "y": "ок. 1668", "m": "Эрмитаж, Санкт-Петербург"}, {"f": "img/038.jpg", "a": "Ян Вермеер", "t": "Кружевница", "y": "ок. 1669–1670", "m": "Лувр, Париж"}, {"f": "img/039.jpg", "a": "Антуан Ватто", "t": "Паломничество на остров Киферу", "y": "1717", "m": "Лувр, Париж"}, {"f": "img/040.jpg", "a": "Каналетто", "t": "Двор каменотёса", "y": "ок. 1725", "m": "Лондонская национальная галерея"}, {"f": "img/041.jpg", "a": "Томас Гейнсборо", "t": "Мистер и миссис Эндрюс", "y": "ок. 1750", "m": "Лондонская национальная галерея"}, {"f": "img/042.jpg", "a": "Томас Гейнсборо", "t": "Голубой мальчик", "y": "ок. 1770", "m": "Библиотека Хантингтона, Сан-Марино (Калифорния)"}, {"f": "img/043.jpg", "a": "Иоганн Генрих Фюсли", "t": "Ночной кошмар", "y": "1781", "m": "Детройтский институт искусств"}, {"f": "img/044.jpg", "a": "Жак-Луи Давид", "t": "Клятва Горациев", "y": "1784", "m": "Лувр, Париж"}, {"f": "img/045.jpg", "a": "Жак-Луи Давид", "t": "Смерть Марата", "y": "1793", "m": "Королевские музеи изящных искусств, Брюссель"}, {"f": "img/046.jpg", "a": "Каспар Давид Фридрих", "t": "Монах у моря", "y": "1808–1810", "m": "Старая национальная галерея, Берлин"}, {"f": "img/047.jpg", "a": "Франсиско Гойя", "t": "Третье мая 1808 года в Мадриде", "y": "1814", "m": "Прадо, Мадрид"}, {"f": "img/048.jpg", "a": "Каспар Давид Фридрих", "t": "Странник над морем тумана", "y": "ок. 1818", "m": "Кунстхалле, Гамбург"}, {"f": "img/049.jpg", "a": "Каспар Давид Фридрих", "t": "Меловые скалы на Рюгене", "y": "1818", "m": "Музей Оскара Рейнхарта, Винтертур"}, {"f": "img/050.jpg", "a": "Теодор Жерико", "t": "Плот «Медузы»", "y": "1818–1819", "m": "Лувр, Париж"}, {"f": "img/051.jpg", "a": "Джон Констебл", "t": "Телега для сена", "y": "1821", "m": "Лондонская национальная галерея"}, {"f": "img/052.jpg", "a": "Эжен Делакруа", "t": "Свобода, ведущая народ", "y": "1830", "m": "Лувр, Париж"}, {"f": "img/053.jpg", "a": "Кацусика Хокусай", "t": "Большая волна в Канагаве", "y": "ок. 1831", "m": "Ксилография, серия «36 видов Фудзи»"}, {"f": "img/054.jpg", "a": "Кацусика Хокусай", "t": "Южный ветер. Ясный день (Красная Фудзи)", "y": "ок. 1831", "m": "Ксилография, серия «36 видов Фудзи»"}, {"f": "img/055.jpg", "a": "Карл Брюллов", "t": "Последний день Помпеи", "y": "1830–1833", "m": "Русский музей, Санкт-Петербург"}, {"f": "img/056.jpg", "a": "Уильям Тёрнер", "t": "Последний рейс корабля «Отважный»", "y": "1839", "m": "Лондонская национальная галерея"}, {"f": "img/057.jpg", "a": "Уильям Тёрнер", "t": "Дождь, пар и скорость", "y": "1844", "m": "Лондонская национальная галерея"}, {"f": "img/058.jpg", "a": "Гюстав Курбе", "t": "Похороны в Орнане", "y": "1849–1850", "m": "Музей Орсе, Париж"}, {"f": "img/059.jpg", "a": "Иван Айвазовский", "t": "Девятый вал", "y": "1850", "m": "Русский музей, Санкт-Петербург"}, {"f": "img/060.jpg", "a": "Гюстав Курбе", "t": "Здравствуйте, господин Курбе", "y": "1854", "m": "Музей Фабра, Монпелье"}, {"f": "img/061.jpg", "a": "Александр Иванов", "t": "Явление Христа народу", "y": "1837–1857", "m": "Третьяковская галерея, Москва"}, {"f": "img/062.jpg", "a": "Жан-Франсуа Милле", "t": "Сборщицы колосьев", "y": "1857", "m": "Музей Орсе, Париж"}, {"f": "img/063.jpg", "a": "Утагава Хиросигэ", "t": "Внезапный ливень над мостом Охаси в Атакэ", "y": "1857", "m": "Ксилография, серия «100 знаменитых видов Эдо»"}, {"f": "img/064.jpg", "a": "Жан-Франсуа Милле", "t": "Анжелюс", "y": "1857–1859", "m": "Музей Орсе, Париж"}, {"f": "img/065.jpg", "a": "Клод Моне", "t": "Женщины в саду", "y": "1866", "m": "Музей Орсе, Париж"}, {"f": "img/066.jpg", "a": "Джеймс Эббот Мак-Нил Уистлер", "t": "Аранжировка в сером и чёрном № 1 (Портрет матери)", "y": "1871", "m": "Музей Орсе, Париж"}, {"f": "img/067.jpg", "a": "Василий Верещагин", "t": "Апофеоз войны", "y": "1871", "m": "Третьяковская галерея, Москва"}, {"f": "img/068.jpg", "a": "Клод Моне", "t": "Впечатление. Восходящее солнце", "y": "1872", "m": "Музей Мармоттан-Моне, Париж"}, {"f": "img/069.jpg", "a": "Иван Крамской", "t": "Христос в пустыне", "y": "1872", "m": "Третьяковская галерея, Москва"}, {"f": "img/070.jpg", "a": "Илья Репин", "t": "Бурлаки на Волге", "y": "1870–1873", "m": "Русский музей, Санкт-Петербург"}, {"f": "img/071.jpg", "a": "Данте Габриэль Россетти", "t": "Прозерпина", "y": "1874", "m": "Галерея Тейт, Лондон"}, {"f": "img/072.jpg", "a": "Клод Моне", "t": "Прогулка. Дама с зонтиком", "y": "1875", "m": "Национальная галерея искусства, Вашингтон"}, {"f": "img/073.jpg", "a": "Пьер Огюст Ренуар", "t": "Бал в Мулен де ла Галетт", "y": "1876", "m": "Музей Орсе, Париж"}, {"f": "img/074.jpg", "a": "Гюстав Кайботт", "t": "Парижская улица в дождливую погоду", "y": "1877", "m": "Чикагский институт искусств"}, {"f": "img/075.jpg", "a": "Архип Куинджи", "t": "Лунная ночь на Днепре", "y": "1880", "m": "Русский музей, Санкт-Петербург"}, {"f": "img/076.jpg", "a": "Пьер Огюст Ренуар", "t": "Завтрак гребцов", "y": "1880–1881", "m": "Собрание Филлипса, Вашингтон"}, {"f": "img/077.jpg", "a": "Пьер Огюст Ренуар", "t": "Две сестры (На террасе)", "y": "1881", "m": "Чикагский институт искусств"}, {"f": "img/078.jpg", "a": "Эдуар Мане", "t": "Бар в «Фоли-Бержер»", "y": "1882", "m": "Галерея Курто, Лондон"}, {"f": "img/079.jpg", "a": "Илья Репин", "t": "Крестный ход в Курской губернии", "y": "1880–1883", "m": "Третьяковская галерея, Москва"}, {"f": "img/080.jpg", "a": "Пьер Огюст Ренуар", "t": "Танец в Буживале", "y": "1883", "m": "Музей изящных искусств, Бостон"}, {"f": "img/081.jpg", "a": "Жорж Сёра", "t": "Воскресный день на острове Гранд-Жатт", "y": "1884–1886", "m": "Чикагский институт искусств"}, {"f": "img/082.jpg", "a": "Винсент Ван Гог", "t": "Едоки картофеля", "y": "1885", "m": "Музей Ван Гога, Амстердам"}, {"f": "img/083.jpg", "a": "Джон Сингер Сарджент", "t": "Гвоздика, лилия, лилия, роза", "y": "1885–1886", "m": "Галерея Тейт, Лондон"}, {"f": "img/084.jpg", "a": "Винсент Ван Гог", "t": "Ночная терраса кафе", "y": "1888", "m": "Музей Крёллер-Мюллер, Оттерло"}, {"f": "img/085.jpg", "a": "Винсент Ван Гог", "t": "Ночное кафе", "y": "1888", "m": "Художественная галерея Йельского университета"}, {"f": "img/086.jpg", "a": "Винсент Ван Гог", "t": "Спальня в Арле", "y": "1888", "m": "Музей Ван Гога, Амстердам"}, {"f": "img/087.jpg", "a": "Винсент Ван Гог", "t": "Автопортрет с перевязанным ухом", "y": "1889", "m": "Галерея Курто, Лондон"}, {"f": "img/088.jpg", "a": "Винсент Ван Гог", "t": "Звёздная ночь", "y": "1889", "m": "Музей современного искусства (MoMA), Нью-Йорк"}, {"f": "img/089.jpg", "a": "Иван Шишкин, Константин Савицкий", "t": "Утро в сосновом лесу", "y": "1889", "m": "Третьяковская галерея, Москва"}, {"f": "img/090.jpg", "a": "Винсент Ван Гог", "t": "Пшеничное поле с воронами", "y": "1890", "m": "Музей Ван Гога, Амстердам"}, {"f": "img/091.jpg", "a": "Михаил Врубель", "t": "Демон сидящий", "y": "1890", "m": "Третьяковская галерея, Москва"}, {"f": "img/092.jpg", "a": "Илья Репин", "t": "Запорожцы пишут письмо турецкому султану", "y": "1880–1891", "m": "Русский музей, Санкт-Петербург"}, {"f": "img/093.jpg", "a": "Исаак Левитан", "t": "Владимирка", "y": "1892", "m": "Третьяковская галерея, Москва"}, {"f": "img/094.jpg", "a": "Поль Сезанн", "t": "Корзина с яблоками", "y": "ок. 1893", "m": "Чикагский институт искусств"}, {"f": "img/095.jpg", "a": "Исаак Левитан", "t": "Золотая осень", "y": "1895", "m": "Третьяковская галерея, Москва"}, {"f": "img/096.jpg", "a": "Анри Руссо", "t": "Спящая цыганка", "y": "1897", "m": "Музей современного искусства (MoMA), Нью-Йорк"}, {"f": "img/097.jpg", "a": "Михаил Врубель", "t": "Царевна-Лебедь", "y": "1900", "m": "Третьяковская галерея, Москва"}, {"f": "img/098.jpg", "a": "Густав Климт", "t": "Портрет Адели Блох-Бауэр I", "y": "1907", "m": "Новая галерея, Нью-Йорк"}, {"f": "img/099.jpg", "a": "Густав Климт", "t": "Поцелуй", "y": "1907–1908", "m": "Галерея Бельведер, Вена"}, {"f": "img/100.jpg", "a": "Василий Кандинский", "t": "Композиция VII", "y": "1913", "m": "Третьяковская галерея, Москва"}, {"f": "img/101.jpg", "a": "Казимир Малевич", "t": "Чёрный супрематический квадрат", "y": "1915", "m": "Третьяковская галерея, Москва"}];
+(function(){
+  var INTERVAL = 5*60*1000;
+  var order = [], pos = -1, cur = 0, timer = null, captionsOn = true, side = 0;
+
+  function shuffle(n){
+    var a=[],i,j,t; for(i=0;i<n;i++)a.push(i);
+    for(i=n-1;i>0;i--){j=Math.floor(Math.random()*(i+1));t=a[i];a[i]=a[j];a[j]=t;}
+    return a;
+  }
+  function el(id){return document.getElementById(id);}
+  function setText(id,s){el(id).textContent=s;}
+
+  function caption(p){
+    var lab=el('lab'), cnt=el('count');
+    lab.className='label';
+    setTimeout(function(){
+      side=1-side;
+      setText('la',p.a);
+      setText('lt','«'+p.t+'»');
+      el('lm').innerHTML='';
+      var y=document.createElement('b'); y.textContent=p.y;
+      el('lm').appendChild(y);
+      el('lm').appendChild(document.createTextNode('  ·  '+p.m));
+      lab.className='label '+(side?'right':'left')+(captionsOn?' on':'');
+      cnt.className=side?'left':'right';
+      cnt.textContent=(pos+1)+' / '+order.length;
+      cnt.style.visibility=captionsOn?'visible':'hidden';
+    },700);
+  }
+
+  function show(step){
+    if(!ART.length)return;
+    if(order.length!==ART.length) order=shuffle(ART.length);
+    pos+=step;
+    if(pos>=order.length){ order=shuffle(ART.length); pos=0; }
+    if(pos<0) pos=order.length-1;
+    var p=ART[order[pos]];
+    var nxt=1-cur, img=el('i'+nxt), tries=0;
+    img.onload=function(){
+      el('f'+nxt).className='frame on';
+      el('f'+cur).className='frame';
+      cur=nxt;
+      caption(p);
+      preload();
+    };
+    img.onerror=function(){ if(++tries<2){ show(step>=0?1:-1); } };
+    img.alt=p.a+', «'+p.t+'», '+p.y;
+    img.src=p.f;
+    restart();
+  }
+  function preload(){
+    var n=order[(pos+1)%order.length]; if(n===undefined)return;
+    var im=new Image(); im.src=ART[n].f;
+  }
+  function restart(){ if(timer)clearInterval(timer); timer=setInterval(function(){show(1);},INTERVAL); }
+
+  function toggleCaptions(){
+    captionsOn=!captionsOn;
+    var lab=el('lab');
+    lab.className=lab.className.replace(' on','')+(captionsOn?' on':'');
+    el('count').style.visibility=captionsOn?'visible':'hidden';
+  }
+  function fullscreen(){
+    var d=document.documentElement, r=d.requestFullscreen||d.webkitRequestFullscreen;
+    try{ if(r && !(document.fullscreenElement||document.webkitFullscreenElement)){ var x=r.call(d); if(x&&x.catch)x.catch(function(){}); } }catch(e){}
+  }
+  function keepAwake(){
+    try{ if(navigator.wakeLock&&navigator.wakeLock.request){ navigator.wakeLock.request('screen').catch(function(){}); } }catch(e){}
+  }
+
+  document.addEventListener('keydown',function(e){
+    var k=e.keyCode;
+    if(k===39){show(1);e.preventDefault();}
+    else if(k===37){show(-1);e.preventDefault();}
+    else if(k===13||k===73){toggleCaptions();e.preventDefault();}
+    else if(k===70){fullscreen();}
+  });
+  document.addEventListener('click',function(){ fullscreen(); keepAwake(); });
+  document.addEventListener('visibilitychange',function(){ if(!document.hidden)keepAwake(); });
+
+  setTimeout(function(){ el('hint').className='off'; },20000);
+  keepAwake();
+  show(1);
+})();
+</script>
