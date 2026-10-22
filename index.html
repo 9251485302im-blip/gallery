@@ -73,6 +73,7 @@ body{font-family:var(--body);cursor:none;
     <div class="meta" id="lm"></div>
   </div>
   <div id="count" class="right"></div>
+  <video id="keep" src="keep.mp4" autoplay muted loop playsinline style="position:absolute;left:0;bottom:0;width:8px;height:8px;opacity:1;pointer-events:none"></video>
   <div id="hint">Смена картины раз в 5 минут &nbsp;·&nbsp; <kbd>◀</kbd><kbd>▶</kbd> листать &nbsp;·&nbsp; <kbd>OK</kbd> скрыть подпись &nbsp;·&nbsp; щелчок — во весь экран</div>
 </div>
 
@@ -144,7 +145,14 @@ var ART = [{"f": "img/001.jpg", "a": "Андрей Рублёв", "t": "Трои
     var d=document.documentElement, r=d.requestFullscreen||d.webkitRequestFullscreen;
     try{ if(r && !(document.fullscreenElement||document.webkitFullscreenElement)){ var x=r.call(d); if(x&&x.catch)x.catch(function(){}); } }catch(e){}
   }
+  function keepVideo(){
+    var v=el('keep'); if(!v)return;
+    v.muted=true;
+    try{ if(v.paused){ var x=v.play(); if(x&&x.catch)x.catch(function(){}); } }catch(e){}
+  }
+  setInterval(keepVideo,30000);
   function keepAwake(){
+    keepVideo();
     try{ if(navigator.wakeLock&&navigator.wakeLock.request){ navigator.wakeLock.request('screen').catch(function(){}); } }catch(e){}
   }
 
