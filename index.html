@@ -83,10 +83,47 @@ var ART = [{"f": "img/001.jpg", "a": "Андрей Рублёв", "t": "Трои
   var INTERVAL = 5*60*1000;
   var order = [], pos = -1, cur = 0, timer = null, captionsOn = true, side = 0;
 
-  function shuffle(n){
+  function rawShuffle(n){
     var a=[],i,j,t; for(i=0;i<n;i++)a.push(i);
     for(i=n-1;i>0;i--){j=Math.floor(Math.random()*(i+1));t=a[i];a[i]=a[j];a[j]=t;}
     return a;
+  }
+  /* Перемешать так, чтобы один художник не шёл подряд, а начало нового круга
+     не повторяло конец прошлого (prevTail — последние картины прошлого круга). */
+  function shuffle(n,prevTail){
+    var best=null,bestScore=1e9,k,a,i,score,GAP=Math.min(25,Math.floor(n/3));
+    for(k=0;k<40;k++){
+      a=rawShuffle(n);
+      if(prevTail&&prevTail.length){
+        var head=[],rest=[];
+        for(i=0;i<n;i++){ if(head.length<GAP&&prevTail.indexOf(a[i])<0) head.push(a[i]); else rest.push(a[i]); }
+        a=head.concat(rest);
+      }
+      for(i=1;i<n;i++){
+        if(ART[a[i]].a===ART[a[i-1]].a){
+          for(var j=Math.max(i+1,(prevTail&&i<GAP)?GAP:0);j<n;j++){
+            if(ART[a[j]].a!==ART[a[i-1]].a && (i+1>=n||ART[a[j]].a!==ART[a[i+1]].a)){var t=a[i];a[i]=a[j];a[j]=t;break;}
+          }
+        }
+      }
+      score=0;
+      for(i=1;i<n;i++) if(ART[a[i]].a===ART[a[i-1]].a) score+=10;
+      if(prevTail&&prevTail.length){
+        if(ART[a[0]].a===ART[prevTail[prevTail.length-1]].a) score+=10;
+        for(i=0;i<GAP&&i<n;i++) if(prevTail.indexOf(a[i])>=0) score+=1;
+      }
+      if(score<bestScore){best=a;bestScore=score;if(score===0)break;}
+    }
+    return best;
+  }
+  function save(){
+    try{ localStorage.setItem('gallery-state',JSON.stringify({n:ART.length,order:order,pos:pos})); }catch(e){}
+  }
+  function restore(){
+    try{
+      var st=JSON.parse(localStorage.getItem('gallery-state')||'null');
+      if(st&&st.n===ART.length&&st.order&&st.order.length===ART.length){ order=st.order; pos=Math.max(-1,(st.pos|0)-1); }
+    }catch(e){}
   }
   function el(id){return document.getElementById(id);}
   function setText(id,s){el(id).textContent=s;}
@@ -113,7 +150,7 @@ var ART = [{"f": "img/001.jpg", "a": "Андрей Рублёв", "t": "Трои
     if(!ART.length)return;
     if(order.length!==ART.length) order=shuffle(ART.length);
     pos+=step;
-    if(pos>=order.length){ order=shuffle(ART.length); pos=0; }
+    if(pos>=order.length){ order=shuffle(ART.length,order.slice(-25)); pos=0; }
     if(pos<0) pos=order.length-1;
     var p=ART[order[pos]];
     var nxt=1-cur, img=el('i'+nxt), tries=0;
@@ -127,6 +164,7 @@ var ART = [{"f": "img/001.jpg", "a": "Андрей Рублёв", "t": "Трои
     img.onerror=function(){ if(++tries<2){ show(step>=0?1:-1); } };
     img.alt=p.a+', «'+p.t+'», '+p.y;
     img.src=p.f;
+    save();
     restart();
   }
   function preload(){
@@ -168,6 +206,7 @@ var ART = [{"f": "img/001.jpg", "a": "Андрей Рублёв", "t": "Трои
 
   setTimeout(function(){ el('hint').className='off'; },20000);
   keepAwake();
+  restore();
   show(1);
 })();
 </script>
