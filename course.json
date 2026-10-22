@@ -1,0 +1,1741 @@
+{
+ "title": "Курс живописи",
+ "start": "2026-10-22",
+ "days": [
+  {
+   "day": 1,
+   "paintings": [
+    {
+     "author": "Ян Вермеер",
+     "title": "Астроном",
+     "year": "1668",
+     "museum": "Лувр, Париж",
+     "image": "https://9251485302im-blip.github.io/gallery/img/168.jpg"
+    },
+    {
+     "author": "Иван Крамской",
+     "title": "Христос в пустыне",
+     "year": "1872",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/069.jpg"
+    },
+    {
+     "author": "Питер Брейгель Старший",
+     "title": "Крестьянская свадьба",
+     "year": "1567",
+     "museum": "Музей истории искусств, Вена",
+     "image": "https://9251485302im-blip.github.io/gallery/img/022.jpg"
+    }
+   ]
+  },
+  {
+   "day": 2,
+   "paintings": [
+    {
+     "author": "Микеланджело Буонарроти",
+     "title": "Сотворение Адама",
+     "year": "ок. 1512",
+     "museum": "Сикстинская капелла, Ватикан",
+     "image": "https://9251485302im-blip.github.io/gallery/img/016.jpg"
+    },
+    {
+     "author": "Борис Кустодиев",
+     "title": "Большевик",
+     "year": "1920",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/231.jpg"
+    },
+    {
+     "author": "Жан-Франсуа Милле",
+     "title": "Сборщицы колосьев",
+     "year": "1857",
+     "museum": "Музей Орсе, Париж",
+     "image": "https://9251485302im-blip.github.io/gallery/img/062.jpg"
+    }
+   ]
+  },
+  {
+   "day": 3,
+   "paintings": [
+    {
+     "author": "Каспар Давид Фридрих",
+     "title": "Меловые скалы на Рюгене",
+     "year": "1818",
+     "museum": "Музей Оскара Рейнхарта, Винтертур",
+     "image": "https://9251485302im-blip.github.io/gallery/img/049.jpg"
+    },
+    {
+     "author": "Артемизия Джентилески",
+     "title": "Автопортрет в образе аллегории живописи",
+     "year": "1638–1639",
+     "museum": "Королевская коллекция, Лондон",
+     "image": "https://9251485302im-blip.github.io/gallery/img/159.jpg"
+    },
+    {
+     "author": "Винсент Ван Гог",
+     "title": "Автопортрет с перевязанным ухом",
+     "year": "1889",
+     "museum": "Галерея Курто, Лондон",
+     "image": "https://9251485302im-blip.github.io/gallery/img/087.jpg"
+    }
+   ]
+  },
+  {
+   "day": 4,
+   "paintings": [
+    {
+     "author": "Леонардо да Винчи",
+     "title": "Тайная вечеря",
+     "year": "1495–1498",
+     "museum": "Санта-Мария-делле-Грацие, Милан",
+     "image": "https://9251485302im-blip.github.io/gallery/img/010.jpg"
+    },
+    {
+     "author": "Франц Марк",
+     "title": "Синий конь I",
+     "year": "1911",
+     "museum": "Галерея Ленбаххаус, Мюнхен",
+     "image": "https://9251485302im-blip.github.io/gallery/img/227.jpg"
+    },
+    {
+     "author": "Питер Брейгель Старший",
+     "title": "Охотники на снегу",
+     "year": "1565",
+     "museum": "Музей истории искусств, Вена",
+     "image": "https://9251485302im-blip.github.io/gallery/img/021.jpg"
+    }
+   ]
+  },
+  {
+   "day": 5,
+   "paintings": [
+    {
+     "author": "Ян Вермеер",
+     "title": "Кружевница",
+     "year": "ок. 1669–1670",
+     "museum": "Лувр, Париж",
+     "image": "https://9251485302im-blip.github.io/gallery/img/038.jpg"
+    },
+    {
+     "author": "Жан Огюст Доминик Энгр",
+     "title": "Наполеон на императорском троне",
+     "year": "1806",
+     "museum": "Музей армии, Париж",
+     "image": "https://9251485302im-blip.github.io/gallery/img/176.jpg"
+    },
+    {
+     "author": "Жак-Луи Давид",
+     "title": "Клятва Горациев",
+     "year": "1784",
+     "museum": "Лувр, Париж",
+     "image": "https://9251485302im-blip.github.io/gallery/img/044.jpg"
+    }
+   ]
+  },
+  {
+   "day": 6,
+   "paintings": [
+    {
+     "author": "Утагава Хиросигэ",
+     "title": "Сливовый сад в Камэйдо",
+     "year": "1857",
+     "museum": "Ксилография, серия «100 знаменитых видов Эдо»",
+     "image": "https://9251485302im-blip.github.io/gallery/img/234.jpg"
+    },
+    {
+     "author": "Архип Куинджи",
+     "title": "Лунная ночь на Днепре",
+     "year": "1880",
+     "museum": "Русский музей, Санкт-Петербург",
+     "image": "https://9251485302im-blip.github.io/gallery/img/075.jpg"
+    },
+    {
+     "author": "Хуберт и Ян ван Эйк",
+     "title": "Гентский алтарь",
+     "year": "1432",
+     "museum": "Собор Святого Бавона, Гент",
+     "image": "https://9251485302im-blip.github.io/gallery/img/004.jpg"
+    }
+   ]
+  },
+  {
+   "day": 7,
+   "paintings": [
+    {
+     "author": "Джон Сингер Сарджент",
+     "title": "Гвоздика, лилия, лилия, роза",
+     "year": "1885–1886",
+     "museum": "Галерея Тейт, Лондон",
+     "image": "https://9251485302im-blip.github.io/gallery/img/083.jpg"
+    },
+    {
+     "author": "Илья Репин",
+     "title": "Запорожцы пишут письмо турецкому султану",
+     "year": "1880–1891",
+     "museum": "Русский музей, Санкт-Петербург",
+     "image": "https://9251485302im-blip.github.io/gallery/img/092.jpg"
+    },
+    {
+     "author": "Клод Лоррен",
+     "title": "Гавань с отплытием царицы Савской",
+     "year": "1648",
+     "museum": "Лондонская национальная галерея",
+     "image": "https://9251485302im-blip.github.io/gallery/img/160.jpg"
+    }
+   ]
+  },
+  {
+   "day": 8,
+   "paintings": [
+    {
+     "author": "Василий Тропинин",
+     "title": "Кружевница",
+     "year": "1823",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/178.jpg"
+    },
+    {
+     "author": "Гюстав Курбе",
+     "title": "Похороны в Орнане",
+     "year": "1849–1850",
+     "museum": "Музей Орсе, Париж",
+     "image": "https://9251485302im-blip.github.io/gallery/img/058.jpg"
+    },
+    {
+     "author": "Диего Веласкес",
+     "title": "Менины",
+     "year": "1656",
+     "museum": "Прадо, Мадрид",
+     "image": "https://9251485302im-blip.github.io/gallery/img/031.jpg"
+    }
+   ]
+  },
+  {
+   "day": 9,
+   "paintings": [
+    {
+     "author": "Мэри Кассат",
+     "title": "Купание ребёнка",
+     "year": "1893",
+     "museum": "Чикагский институт искусств",
+     "image": "https://9251485302im-blip.github.io/gallery/img/129.jpg"
+    },
+    {
+     "author": "Леонардо да Винчи",
+     "title": "Мона Лиза (Джоконда)",
+     "year": "1503–1519",
+     "museum": "Лувр, Париж",
+     "image": "https://9251485302im-blip.github.io/gallery/img/013.jpg"
+    },
+    {
+     "author": "Тициан",
+     "title": "Вакх и Ариадна",
+     "year": "1520–1523",
+     "museum": "Лондонская национальная галерея",
+     "image": "https://9251485302im-blip.github.io/gallery/img/149.jpg"
+    }
+   ]
+  },
+  {
+   "day": 10,
+   "paintings": [
+    {
+     "author": "Рембрандт ван Рейн",
+     "title": "Автопортрет с двумя кругами",
+     "year": "ок. 1665–1669",
+     "museum": "Кенвуд-хаус, Лондон",
+     "image": "https://9251485302im-blip.github.io/gallery/img/104.jpg"
+    },
+    {
+     "author": "Камиль Коро",
+     "title": "Воспоминание о Мортфонтене",
+     "year": "1864",
+     "museum": "Лувр, Париж",
+     "image": "https://9251485302im-blip.github.io/gallery/img/188.jpg"
+    },
+    {
+     "author": "Константин Флавицкий",
+     "title": "Княжна Тараканова",
+     "year": "1864",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/187.jpg"
+    }
+   ]
+  },
+  {
+   "day": 11,
+   "paintings": [
+    {
+     "author": "Жорж де Латур",
+     "title": "Шулер с бубновым тузом",
+     "year": "ок. 1635",
+     "museum": "Лувр, Париж",
+     "image": "https://9251485302im-blip.github.io/gallery/img/157.jpg"
+    },
+    {
+     "author": "Сандро Боттичелли",
+     "title": "Весна",
+     "year": "ок. 1480",
+     "museum": "Галерея Уффици, Флоренция",
+     "image": "https://9251485302im-blip.github.io/gallery/img/007.jpg"
+    },
+    {
+     "author": "Фра Анджелико",
+     "title": "Благовещение",
+     "year": "ок. 1426",
+     "museum": "Прадо, Мадрид",
+     "image": "https://9251485302im-blip.github.io/gallery/img/142.jpg"
+    }
+   ]
+  },
+  {
+   "day": 12,
+   "paintings": [
+    {
+     "author": "Альбрехт Дюрер",
+     "title": "Заяц",
+     "year": "1502",
+     "museum": "Альбертина, Вена",
+     "image": "https://9251485302im-blip.github.io/gallery/img/147.jpg"
+    },
+    {
+     "author": "Кацусика Хокусай",
+     "title": "Большая волна в Канагаве",
+     "year": "ок. 1831",
+     "museum": "Ксилография, серия «36 видов Фудзи»",
+     "image": "https://9251485302im-blip.github.io/gallery/img/053.jpg"
+    },
+    {
+     "author": "Мейндерт Хоббема",
+     "title": "Аллея в Мидделхарнисе",
+     "year": "1689",
+     "museum": "Лондонская национальная галерея",
+     "image": "https://9251485302im-blip.github.io/gallery/img/169.jpg"
+    }
+   ]
+  },
+  {
+   "day": 13,
+   "paintings": [
+    {
+     "author": "Ян Вермеер",
+     "title": "Молочница",
+     "year": "ок. 1658",
+     "museum": "Рейксмюсеум, Амстердам",
+     "image": "https://9251485302im-blip.github.io/gallery/img/032.jpg"
+    },
+    {
+     "author": "Каналетто",
+     "title": "Двор каменотёса",
+     "year": "ок. 1725",
+     "museum": "Лондонская национальная галерея",
+     "image": "https://9251485302im-blip.github.io/gallery/img/040.jpg"
+    },
+    {
+     "author": "Франс Халс",
+     "title": "Смеющийся кавалер",
+     "year": "1624",
+     "museum": "Собрание Уоллеса, Лондон",
+     "image": "https://9251485302im-blip.github.io/gallery/img/026.jpg"
+    }
+   ]
+  },
+  {
+   "day": 14,
+   "paintings": [
+    {
+     "author": "Ян ван Эйк",
+     "title": "Портрет мужчины в красном тюрбане",
+     "year": "1433",
+     "museum": "Лондонская национальная галерея",
+     "image": "https://9251485302im-blip.github.io/gallery/img/002.jpg"
+    },
+    {
+     "author": "Гюстав Кайботт",
+     "title": "Парижская улица в дождливую погоду",
+     "year": "1877",
+     "museum": "Чикагский институт искусств",
+     "image": "https://9251485302im-blip.github.io/gallery/img/074.jpg"
+    },
+    {
+     "author": "Карел Фабрициус",
+     "title": "Щегол",
+     "year": "1654",
+     "museum": "Маурицхёйс, Гаага",
+     "image": "https://9251485302im-blip.github.io/gallery/img/111.jpg"
+    }
+   ]
+  },
+  {
+   "day": 15,
+   "paintings": [
+    {
+     "author": "Бартоломе Эстебан Мурильо",
+     "title": "Маленький нищий",
+     "year": "ок. 1650",
+     "museum": "Лувр, Париж",
+     "image": "https://9251485302im-blip.github.io/gallery/img/162.jpg"
+    },
+    {
+     "author": "Василий Суриков",
+     "title": "Переход Суворова через Альпы",
+     "year": "1899",
+     "museum": "Русский музей, Санкт-Петербург",
+     "image": "https://9251485302im-blip.github.io/gallery/img/219.jpg"
+    },
+    {
+     "author": "Василий Перов",
+     "title": "Портрет Ф. М. Достоевского",
+     "year": "1872",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/195.jpg"
+    }
+   ]
+  },
+  {
+   "day": 16,
+   "paintings": [
+    {
+     "author": "Уильям Тёрнер",
+     "title": "Последний рейс корабля «Отважный»",
+     "year": "1839",
+     "museum": "Лондонская национальная галерея",
+     "image": "https://9251485302im-blip.github.io/gallery/img/056.jpg"
+    },
+    {
+     "author": "Алексей Саврасов",
+     "title": "Грачи прилетели",
+     "year": "1871",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/108.jpg"
+    },
+    {
+     "author": "Валентин Серов",
+     "title": "Девушка, освещённая солнцем",
+     "year": "1888",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/123.jpg"
+    }
+   ]
+  },
+  {
+   "day": 17,
+   "paintings": [
+    {
+     "author": "Джованни Беллини",
+     "title": "Портрет дожа Леонардо Лоредана",
+     "year": "1501",
+     "museum": "Лондонская национальная галерея",
+     "image": "https://9251485302im-blip.github.io/gallery/img/146.jpg"
+    },
+    {
+     "author": "Рафаэль Санти",
+     "title": "Портрет Бальдассаре Кастильоне",
+     "year": "ок. 1514–1515",
+     "museum": "Лувр, Париж",
+     "image": "https://9251485302im-blip.github.io/gallery/img/148.jpg"
+    },
+    {
+     "author": "Леонардо да Винчи",
+     "title": "Мадонна в скалах",
+     "year": "1483–1486",
+     "museum": "Лувр, Париж",
+     "image": "https://9251485302im-blip.github.io/gallery/img/145.jpg"
+    }
+   ]
+  },
+  {
+   "day": 18,
+   "paintings": [
+    {
+     "author": "Пьер Огюст Ренуар",
+     "title": "Завтрак гребцов",
+     "year": "1880–1881",
+     "museum": "Собрание Филлипса, Вашингтон",
+     "image": "https://9251485302im-blip.github.io/gallery/img/076.jpg"
+    },
+    {
+     "author": "Жорж Сёра",
+     "title": "Воскресный день на острове Гранд-Жатт",
+     "year": "1884–1886",
+     "museum": "Чикагский институт искусств",
+     "image": "https://9251485302im-blip.github.io/gallery/img/081.jpg"
+    },
+    {
+     "author": "Исаак Левитан",
+     "title": "Владимирка",
+     "year": "1892",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/093.jpg"
+    }
+   ]
+  },
+  {
+   "day": 19,
+   "paintings": [
+    {
+     "author": "Питер Пауль Рубенс",
+     "title": "Воздвижение креста",
+     "year": "1610–1611",
+     "museum": "Собор Антверпенской Богоматери",
+     "image": "https://9251485302im-blip.github.io/gallery/img/025.jpg"
+    },
+    {
+     "author": "Оноре Домье",
+     "title": "Вагон третьего класса",
+     "year": "ок. 1862–1864",
+     "museum": "Национальная галерея Канады, Оттава",
+     "image": "https://9251485302im-blip.github.io/gallery/img/107.jpg"
+    },
+    {
+     "author": "Поль Гоген",
+     "title": "Видение после проповеди",
+     "year": "1888",
+     "museum": "Национальная галерея Шотландии, Эдинбург",
+     "image": "https://9251485302im-blip.github.io/gallery/img/208.jpg"
+    }
+   ]
+  },
+  {
+   "day": 20,
+   "paintings": [
+    {
+     "author": "Жан Батист Симеон Шарден",
+     "title": "Мыльные пузыри",
+     "year": "ок. 1733–1734",
+     "museum": "Метрополитен-музей, Нью-Йорк",
+     "image": "https://9251485302im-blip.github.io/gallery/img/170.jpg"
+    },
+    {
+     "author": "Эжен Делакруа",
+     "title": "Свобода, ведущая народ",
+     "year": "1830",
+     "museum": "Лувр, Париж",
+     "image": "https://9251485302im-blip.github.io/gallery/img/052.jpg"
+    },
+    {
+     "author": "Эль Греко",
+     "title": "Вид Толедо",
+     "year": "ок. 1596–1600",
+     "museum": "Метрополитен-музей, Нью-Йорк",
+     "image": "https://9251485302im-blip.github.io/gallery/img/153.jpg"
+    }
+   ]
+  },
+  {
+   "day": 21,
+   "paintings": [
+    {
+     "author": "Эдгар Дега",
+     "title": "Любительница абсента",
+     "year": "1875–1876",
+     "museum": "Музей Орсе, Париж",
+     "image": "https://9251485302im-blip.github.io/gallery/img/200.jpg"
+    },
+    {
+     "author": "Василий Суриков",
+     "title": "Меншиков в Берёзове",
+     "year": "1883",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/118.jpg"
+    },
+    {
+     "author": "Франсиско Гойя",
+     "title": "Третье мая 1808 года в Мадриде",
+     "year": "1814",
+     "museum": "Прадо, Мадрид",
+     "image": "https://9251485302im-blip.github.io/gallery/img/047.jpg"
+    }
+   ]
+  },
+  {
+   "day": 22,
+   "paintings": [
+    {
+     "author": "Антуан Ватто",
+     "title": "Паломничество на остров Киферу",
+     "year": "1717",
+     "museum": "Лувр, Париж",
+     "image": "https://9251485302im-blip.github.io/gallery/img/039.jpg"
+    },
+    {
+     "author": "Николай Ге",
+     "title": "Пётр I допрашивает царевича Алексея в Петергофе",
+     "year": "1871",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/193.jpg"
+    },
+    {
+     "author": "Диего Веласкес",
+     "title": "Портрет папы Иннокентия X",
+     "year": "ок. 1650",
+     "museum": "Галерея Дориа-Памфили, Рим",
+     "image": "https://9251485302im-blip.github.io/gallery/img/161.jpg"
+    }
+   ]
+  },
+  {
+   "day": 23,
+   "paintings": [
+    {
+     "author": "Леонардо да Винчи",
+     "title": "Дама с горностаем",
+     "year": "1489–1491",
+     "museum": "Национальный музей, Краков",
+     "image": "https://9251485302im-blip.github.io/gallery/img/009.jpg"
+    },
+    {
+     "author": "Берта Моризо",
+     "title": "Колыбель",
+     "year": "1872",
+     "museum": "Музей Орсе, Париж",
+     "image": "https://9251485302im-blip.github.io/gallery/img/196.jpg"
+    },
+    {
+     "author": "Винсент Ван Гог",
+     "title": "Ночная терраса кафе",
+     "year": "1888",
+     "museum": "Музей Крёллер-Мюллер, Оттерло",
+     "image": "https://9251485302im-blip.github.io/gallery/img/084.jpg"
+    }
+   ]
+  },
+  {
+   "day": 24,
+   "paintings": [
+    {
+     "author": "Ганс Гольбейн Младший",
+     "title": "Послы",
+     "year": "1533",
+     "museum": "Лондонская национальная галерея",
+     "image": "https://9251485302im-blip.github.io/gallery/img/102.jpg"
+    },
+    {
+     "author": "Василий Кандинский",
+     "title": "Композиция VIII",
+     "year": "1923",
+     "museum": "Музей Гуггенхайма, Нью-Йорк",
+     "image": "https://9251485302im-blip.github.io/gallery/img/137.jpg"
+    },
+    {
+     "author": "Дуччо ди Буонинсенья",
+     "title": "Маэста",
+     "year": "1308–1311",
+     "museum": "Музей Опера-дель-Дуомо, Сиена",
+     "image": "https://9251485302im-blip.github.io/gallery/img/141.jpg"
+    }
+   ]
+  },
+  {
+   "day": 25,
+   "paintings": [
+    {
+     "author": "Густав Климт",
+     "title": "Смерть и жизнь",
+     "year": "1910–1915",
+     "museum": "Музей Леопольда, Вена",
+     "image": "https://9251485302im-blip.github.io/gallery/img/226.jpg"
+    },
+    {
+     "author": "Александр Иванов",
+     "title": "Явление Христа народу",
+     "year": "1837–1857",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/061.jpg"
+    },
+    {
+     "author": "Рембрандт ван Рейн",
+     "title": "Возвращение блудного сына",
+     "year": "ок. 1668",
+     "museum": "Эрмитаж, Санкт-Петербург",
+     "image": "https://9251485302im-blip.github.io/gallery/img/037.jpg"
+    }
+   ]
+  },
+  {
+   "day": 26,
+   "paintings": [
+    {
+     "author": "Рембрандт ван Рейн",
+     "title": "Ночной дозор",
+     "year": "1642",
+     "museum": "Рейксмюсеум, Амстердам",
+     "image": "https://9251485302im-blip.github.io/gallery/img/030.jpg"
+    },
+    {
+     "author": "Андрей Рублёв",
+     "title": "Троица",
+     "year": "1420-е",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/001.jpg"
+    },
+    {
+     "author": "Михаил Нестеров",
+     "title": "Видение отроку Варфоломею",
+     "year": "1889–1890",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/209.jpg"
+    }
+   ]
+  },
+  {
+   "day": 27,
+   "paintings": [
+    {
+     "author": "Густав Климт",
+     "title": "Портрет Адели Блох-Бауэр I",
+     "year": "1907",
+     "museum": "Новая галерея, Нью-Йорк",
+     "image": "https://9251485302im-blip.github.io/gallery/img/098.jpg"
+    },
+    {
+     "author": "Андреа Мантенья",
+     "title": "Мёртвый Христос",
+     "year": "ок. 1480",
+     "museum": "Пинакотека Брера, Милан",
+     "image": "https://9251485302im-blip.github.io/gallery/img/144.jpg"
+    },
+    {
+     "author": "Эдуар Мане",
+     "title": "Бар в «Фоли-Бержер»",
+     "year": "1882",
+     "museum": "Галерея Курто, Лондон",
+     "image": "https://9251485302im-blip.github.io/gallery/img/078.jpg"
+    }
+   ]
+  },
+  {
+   "day": 28,
+   "paintings": [
+    {
+     "author": "Рогир ван дер Вейден",
+     "title": "Снятие с креста",
+     "year": "ок. 1435",
+     "museum": "Прадо, Мадрид",
+     "image": "https://9251485302im-blip.github.io/gallery/img/005.jpg"
+    },
+    {
+     "author": "Диего Веласкес",
+     "title": "Сдача Бреды",
+     "year": "1634–1635",
+     "museum": "Прадо, Мадрид",
+     "image": "https://9251485302im-blip.github.io/gallery/img/028.jpg"
+    },
+    {
+     "author": "Василий Суриков",
+     "title": "Утро стрелецкой казни",
+     "year": "1881",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/204.jpg"
+    }
+   ]
+  },
+  {
+   "day": 29,
+   "paintings": [
+    {
+     "author": "Тициан",
+     "title": "Венера Урбинская",
+     "year": "1534",
+     "museum": "Галерея Уффици, Флоренция",
+     "image": "https://9251485302im-blip.github.io/gallery/img/019.jpg"
+    },
+    {
+     "author": "Джон Эверетт Милле",
+     "title": "Офелия",
+     "year": "1851–1852",
+     "museum": "Галерея Тейт, Лондон",
+     "image": "https://9251485302im-blip.github.io/gallery/img/106.jpg"
+    },
+    {
+     "author": "Иван Айвазовский",
+     "title": "Чёрное море",
+     "year": "1881",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/205.jpg"
+    }
+   ]
+  },
+  {
+   "day": 30,
+   "paintings": [
+    {
+     "author": "Павел Федотов",
+     "title": "Сватовство майора",
+     "year": "1848",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/183.jpg"
+    },
+    {
+     "author": "Орест Кипренский",
+     "title": "Портрет А. С. Пушкина",
+     "year": "1827",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/114.jpg"
+    },
+    {
+     "author": "Питер де Хох",
+     "title": "Двор дома в Делфте",
+     "year": "1658",
+     "museum": "Лондонская национальная галерея",
+     "image": "https://9251485302im-blip.github.io/gallery/img/165.jpg"
+    }
+   ]
+  },
+  {
+   "day": 31,
+   "paintings": [
+    {
+     "author": "Ян Вермеер",
+     "title": "Вид Делфта",
+     "year": "ок. 1660–1661",
+     "museum": "Маурицхёйс, Гаага",
+     "image": "https://9251485302im-blip.github.io/gallery/img/033.jpg"
+    },
+    {
+     "author": "Джон Сингер Сарджент",
+     "title": "Портрет мадам Икс",
+     "year": "1884",
+     "museum": "Метрополитен-музей, Нью-Йорк",
+     "image": "https://9251485302im-blip.github.io/gallery/img/119.jpg"
+    },
+    {
+     "author": "Казимир Малевич",
+     "title": "Супрематическая композиция: белое на белом",
+     "year": "1918",
+     "museum": "Музей современного искусства (MoMA), Нью-Йорк",
+     "image": "https://9251485302im-blip.github.io/gallery/img/229.jpg"
+    }
+   ]
+  },
+  {
+   "day": 32,
+   "paintings": [
+    {
+     "author": "Поль Гоген",
+     "title": "Таитянки на пляже",
+     "year": "1891",
+     "museum": "Музей Орсе, Париж",
+     "image": "https://9251485302im-blip.github.io/gallery/img/211.jpg"
+    },
+    {
+     "author": "Михаил Врубель",
+     "title": "Царевна-Лебедь",
+     "year": "1900",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/097.jpg"
+    },
+    {
+     "author": "Анри Руссо",
+     "title": "Спящая цыганка",
+     "year": "1897",
+     "museum": "Музей современного искусства (MoMA), Нью-Йорк",
+     "image": "https://9251485302im-blip.github.io/gallery/img/096.jpg"
+    }
+   ]
+  },
+  {
+   "day": 33,
+   "paintings": [
+    {
+     "author": "Василий Поленов",
+     "title": "Московский дворик",
+     "year": "1878",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/202.jpg"
+    },
+    {
+     "author": "Каспар Давид Фридрих",
+     "title": "Монах у моря",
+     "year": "1808–1810",
+     "museum": "Старая национальная галерея, Берлин",
+     "image": "https://9251485302im-blip.github.io/gallery/img/046.jpg"
+    },
+    {
+     "author": "Иван Шишкин, Константин Савицкий",
+     "title": "Утро в сосновом лесу",
+     "year": "1889",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/089.jpg"
+    }
+   ]
+  },
+  {
+   "day": 34,
+   "paintings": [
+    {
+     "author": "Франсиско де Сурбаран",
+     "title": "Натюрморт с лимонами, апельсинами и розой",
+     "year": "1633",
+     "museum": "Музей Нортона Саймона, Пасадина",
+     "image": "https://9251485302im-blip.github.io/gallery/img/155.jpg"
+    },
+    {
+     "author": "Иван Крамской",
+     "title": "Неизвестная",
+     "year": "1883",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/117.jpg"
+    },
+    {
+     "author": "Пьеро делла Франческа",
+     "title": "Крещение Христа",
+     "year": "1450-е",
+     "museum": "Лондонская национальная галерея",
+     "image": "https://9251485302im-blip.github.io/gallery/img/143.jpg"
+    }
+   ]
+  },
+  {
+   "day": 35,
+   "paintings": [
+    {
+     "author": "Джордж Стаббс",
+     "title": "Уистлджекет",
+     "year": "ок. 1762",
+     "museum": "Лондонская национальная галерея",
+     "image": "https://9251485302im-blip.github.io/gallery/img/172.jpg"
+    },
+    {
+     "author": "Теодор Жерико",
+     "title": "Плот «Медузы»",
+     "year": "1818–1819",
+     "museum": "Лувр, Париж",
+     "image": "https://9251485302im-blip.github.io/gallery/img/050.jpg"
+    },
+    {
+     "author": "Гюстав Кайботт",
+     "title": "Паркетчики",
+     "year": "1875",
+     "museum": "Музей Орсе, Париж",
+     "image": "https://9251485302im-blip.github.io/gallery/img/109.jpg"
+    }
+   ]
+  },
+  {
+   "day": 36,
+   "paintings": [
+    {
+     "author": "Иоганн Генрих Фюсли",
+     "title": "Ночной кошмар",
+     "year": "1781",
+     "museum": "Детройтский институт искусств",
+     "image": "https://9251485302im-blip.github.io/gallery/img/043.jpg"
+    },
+    {
+     "author": "Василий Перов",
+     "title": "Охотники на привале",
+     "year": "1871",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/115.jpg"
+    },
+    {
+     "author": "Виктор Васнецов",
+     "title": "Иван-царевич на Сером волке",
+     "year": "1889",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/125.jpg"
+    }
+   ]
+  },
+  {
+   "day": 37,
+   "paintings": [
+    {
+     "author": "Жан-Оноре Фрагонар",
+     "title": "Качели",
+     "year": "1767",
+     "museum": "Собрание Уоллеса, Лондон",
+     "image": "https://9251485302im-blip.github.io/gallery/img/105.jpg"
+    },
+    {
+     "author": "Джозеф Райт из Дерби",
+     "title": "Опыт с птицей в воздушном насосе",
+     "year": "1768",
+     "museum": "Лондонская национальная галерея",
+     "image": "https://9251485302im-blip.github.io/gallery/img/173.jpg"
+    },
+    {
+     "author": "Анри Руссо",
+     "title": "Тигр в тропическую бурю (Сюрприз!)",
+     "year": "1891",
+     "museum": "Лондонская национальная галерея",
+     "image": "https://9251485302im-blip.github.io/gallery/img/212.jpg"
+    }
+   ]
+  },
+  {
+   "day": 38,
+   "paintings": [
+    {
+     "author": "Кузьма Петров-Водкин",
+     "title": "Купание красного коня",
+     "year": "1912",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/136.jpg"
+    },
+    {
+     "author": "Клод Моне",
+     "title": "Впечатление. Восходящее солнце",
+     "year": "1872",
+     "museum": "Музей Мармоттан-Моне, Париж",
+     "image": "https://9251485302im-blip.github.io/gallery/img/068.jpg"
+    },
+    {
+     "author": "Уинслоу Хомер",
+     "title": "Гольфстрим",
+     "year": "1899",
+     "museum": "Метрополитен-музей, Нью-Йорк",
+     "image": "https://9251485302im-blip.github.io/gallery/img/135.jpg"
+    }
+   ]
+  },
+  {
+   "day": 39,
+   "paintings": [
+    {
+     "author": "Ян Вермеер",
+     "title": "Девушка с жемчужной серёжкой",
+     "year": "ок. 1665",
+     "museum": "Маурицхёйс, Гаага",
+     "image": "https://9251485302im-blip.github.io/gallery/img/034.jpg"
+    },
+    {
+     "author": "Джотто ди Бондоне",
+     "title": "Оплакивание Христа",
+     "year": "ок. 1305",
+     "museum": "Капелла Скровеньи, Падуя",
+     "image": "https://9251485302im-blip.github.io/gallery/img/140.jpg"
+    },
+    {
+     "author": "Якоб ван Рейсдал",
+     "title": "Еврейское кладбище",
+     "year": "ок. 1655",
+     "museum": "Детройтский институт искусств",
+     "image": "https://9251485302im-blip.github.io/gallery/img/163.jpg"
+    }
+   ]
+  },
+  {
+   "day": 40,
+   "paintings": [
+    {
+     "author": "Паоло Уччелло",
+     "title": "Святой Георгий и дракон",
+     "year": "ок. 1470",
+     "museum": "Лондонская национальная галерея",
+     "image": "https://9251485302im-blip.github.io/gallery/img/110.jpg"
+    },
+    {
+     "author": "Рафаэль Санти",
+     "title": "Сикстинская мадонна",
+     "year": "1512–1513",
+     "museum": "Галерея старых мастеров, Дрезден",
+     "image": "https://9251485302im-blip.github.io/gallery/img/017.jpg"
+    },
+    {
+     "author": "Карл Брюллов",
+     "title": "Последний день Помпеи",
+     "year": "1830–1833",
+     "museum": "Русский музей, Санкт-Петербург",
+     "image": "https://9251485302im-blip.github.io/gallery/img/055.jpg"
+    }
+   ]
+  },
+  {
+   "day": 41,
+   "paintings": [
+    {
+     "author": "Поль Сезанн",
+     "title": "Корзина с яблоками",
+     "year": "ок. 1893",
+     "museum": "Чикагский институт искусств",
+     "image": "https://9251485302im-blip.github.io/gallery/img/094.jpg"
+    },
+    {
+     "author": "Густав Климт",
+     "title": "Поцелуй",
+     "year": "1907–1908",
+     "museum": "Галерея Бельведер, Вена",
+     "image": "https://9251485302im-blip.github.io/gallery/img/099.jpg"
+    },
+    {
+     "author": "Казимир Малевич",
+     "title": "Чёрный супрематический квадрат",
+     "year": "1915",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/101.jpg"
+    }
+   ]
+  },
+  {
+   "day": 42,
+   "paintings": [
+    {
+     "author": "Джорджоне",
+     "title": "Гроза",
+     "year": "ок. 1508",
+     "museum": "Галерея Академии, Венеция",
+     "image": "https://9251485302im-blip.github.io/gallery/img/014.jpg"
+    },
+    {
+     "author": "Ян Вермеер",
+     "title": "Улочка",
+     "year": "ок. 1658",
+     "museum": "Рейксмюсеум, Амстердам",
+     "image": "https://9251485302im-blip.github.io/gallery/img/164.jpg"
+    },
+    {
+     "author": "Антонис ван Дейк",
+     "title": "Карл I на охоте",
+     "year": "ок. 1635",
+     "museum": "Лувр, Париж",
+     "image": "https://9251485302im-blip.github.io/gallery/img/158.jpg"
+    }
+   ]
+  },
+  {
+   "day": 43,
+   "paintings": [
+    {
+     "author": "Василий Суриков",
+     "title": "Боярыня Морозова",
+     "year": "1884–1887",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/120.jpg"
+    },
+    {
+     "author": "Поль Гоген",
+     "title": "Откуда мы пришли? Кто мы? Куда мы идём?",
+     "year": "1897–1898",
+     "museum": "Музей изящных искусств, Бостон",
+     "image": "https://9251485302im-blip.github.io/gallery/img/132.jpg"
+    },
+    {
+     "author": "Жак-Луи Давид",
+     "title": "Смерть Марата",
+     "year": "1793",
+     "museum": "Королевские музеи изящных искусств, Брюссель",
+     "image": "https://9251485302im-blip.github.io/gallery/img/045.jpg"
+    }
+   ]
+  },
+  {
+   "day": 44,
+   "paintings": [
+    {
+     "author": "Утагава Хиросигэ",
+     "title": "Внезапный ливень над мостом Охаси в Атакэ",
+     "year": "1857",
+     "museum": "Ксилография, серия «100 знаменитых видов Эдо»",
+     "image": "https://9251485302im-blip.github.io/gallery/img/063.jpg"
+    },
+    {
+     "author": "Эль Греко",
+     "title": "Погребение графа Оргаса",
+     "year": "1586–1588",
+     "museum": "Церковь Санто-Томе, Толедо",
+     "image": "https://9251485302im-blip.github.io/gallery/img/151.jpg"
+    },
+    {
+     "author": "Василий Пукирев",
+     "title": "Неравный брак",
+     "year": "1862",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/186.jpg"
+    }
+   ]
+  },
+  {
+   "day": 45,
+   "paintings": [
+    {
+     "author": "Клод Моне",
+     "title": "Сорока",
+     "year": "1868–1869",
+     "museum": "Музей Орсе, Париж",
+     "image": "https://9251485302im-blip.github.io/gallery/img/192.jpg"
+    },
+    {
+     "author": "Жан-Франсуа Милле",
+     "title": "Анжелюс",
+     "year": "1857–1859",
+     "museum": "Музей Орсе, Париж",
+     "image": "https://9251485302im-blip.github.io/gallery/img/064.jpg"
+    },
+    {
+     "author": "Фредерик Лейтон",
+     "title": "Пылающий июнь",
+     "year": "1895",
+     "museum": "Музей искусств Понсе, Пуэрто-Рико",
+     "image": "https://9251485302im-blip.github.io/gallery/img/131.jpg"
+    }
+   ]
+  },
+  {
+   "day": 46,
+   "paintings": [
+    {
+     "author": "Леонардо да Винчи",
+     "title": "Портрет Джиневры де Бенчи",
+     "year": "ок. 1474–1478",
+     "museum": "Национальная галерея искусства, Вашингтон",
+     "image": "https://9251485302im-blip.github.io/gallery/img/006.jpg"
+    },
+    {
+     "author": "Рафаэль Санти",
+     "title": "Афинская школа",
+     "year": "1509–1511",
+     "museum": "Станцы Рафаэля, Ватикан",
+     "image": "https://9251485302im-blip.github.io/gallery/img/015.jpg"
+    },
+    {
+     "author": "Ян ван Эйк",
+     "title": "Портрет четы Арнольфини",
+     "year": "1434",
+     "museum": "Лондонская национальная галерея",
+     "image": "https://9251485302im-blip.github.io/gallery/img/003.jpg"
+    }
+   ]
+  },
+  {
+   "day": 47,
+   "paintings": [
+    {
+     "author": "Винсент Ван Гог",
+     "title": "Пшеничное поле с воронами",
+     "year": "1890",
+     "museum": "Музей Ван Гога, Амстердам",
+     "image": "https://9251485302im-blip.github.io/gallery/img/090.jpg"
+    },
+    {
+     "author": "Василий Кандинский",
+     "title": "Композиция VII",
+     "year": "1913",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/100.jpg"
+    },
+    {
+     "author": "Василий Верещагин",
+     "title": "Апофеоз войны",
+     "year": "1871",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/067.jpg"
+    }
+   ]
+  },
+  {
+   "day": 48,
+   "paintings": [
+    {
+     "author": "Иван Айвазовский",
+     "title": "Девятый вал",
+     "year": "1850",
+     "museum": "Русский музей, Санкт-Петербург",
+     "image": "https://9251485302im-blip.github.io/gallery/img/059.jpg"
+    },
+    {
+     "author": "Винсент Ван Гог",
+     "title": "Звёздная ночь",
+     "year": "1889",
+     "museum": "Музей современного искусства (MoMA), Нью-Йорк",
+     "image": "https://9251485302im-blip.github.io/gallery/img/088.jpg"
+    },
+    {
+     "author": "Михаил Врубель",
+     "title": "Демон сидящий",
+     "year": "1890",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/091.jpg"
+    }
+   ]
+  },
+  {
+   "day": 49,
+   "paintings": [
+    {
+     "author": "Умберто Боччони",
+     "title": "Город встаёт",
+     "year": "1910",
+     "museum": "Музей современного искусства (MoMA), Нью-Йорк",
+     "image": "https://9251485302im-blip.github.io/gallery/img/223.jpg"
+    },
+    {
+     "author": "Винсент Ван Гог",
+     "title": "Едоки картофеля",
+     "year": "1885",
+     "museum": "Музей Ван Гога, Амстердам",
+     "image": "https://9251485302im-blip.github.io/gallery/img/082.jpg"
+    },
+    {
+     "author": "Каспар Давид Фридрих",
+     "title": "Странник над морем тумана",
+     "year": "ок. 1818",
+     "museum": "Кунстхалле, Гамбург",
+     "image": "https://9251485302im-blip.github.io/gallery/img/048.jpg"
+    }
+   ]
+  },
+  {
+   "day": 50,
+   "paintings": [
+    {
+     "author": "Валентин Серов",
+     "title": "Похищение Европы",
+     "year": "1910",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/225.jpg"
+    },
+    {
+     "author": "Франсиско Гойя",
+     "title": "Семья Карла IV",
+     "year": "1800–1801",
+     "museum": "Прадо, Мадрид",
+     "image": "https://9251485302im-blip.github.io/gallery/img/175.jpg"
+    },
+    {
+     "author": "Альбрехт Альтдорфер",
+     "title": "Битва Александра при Иссе",
+     "year": "1529",
+     "museum": "Старая пинакотека, Мюнхен",
+     "image": "https://9251485302im-blip.github.io/gallery/img/018.jpg"
+    }
+   ]
+  },
+  {
+   "day": 51,
+   "paintings": [
+    {
+     "author": "Ян Вермеер",
+     "title": "Аллегория живописи",
+     "year": "ок. 1666–1668",
+     "museum": "Музей истории искусств, Вена",
+     "image": "https://9251485302im-blip.github.io/gallery/img/036.jpg"
+    },
+    {
+     "author": "Джон Констебл",
+     "title": "Собор в Солсбери из сада епископа",
+     "year": "1823",
+     "museum": "Музей Виктории и Альберта, Лондон",
+     "image": "https://9251485302im-blip.github.io/gallery/img/179.jpg"
+    },
+    {
+     "author": "Исаак Левитан",
+     "title": "Золотая осень",
+     "year": "1895",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/095.jpg"
+    }
+   ]
+  },
+  {
+   "day": 52,
+   "paintings": [
+    {
+     "author": "Уильям Тёрнер",
+     "title": "Дождь, пар и скорость",
+     "year": "1844",
+     "museum": "Лондонская национальная галерея",
+     "image": "https://9251485302im-blip.github.io/gallery/img/057.jpg"
+    },
+    {
+     "author": "Виктор Васнецов",
+     "title": "Богатыри",
+     "year": "1881–1898",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/133.jpg"
+    },
+    {
+     "author": "Клод Моне",
+     "title": "Сан-Джорджо Маджоре в сумерках",
+     "year": "1908–1912",
+     "museum": "Национальный музей Уэльса, Кардифф",
+     "image": "https://9251485302im-blip.github.io/gallery/img/222.jpg"
+    }
+   ]
+  },
+  {
+   "day": 53,
+   "paintings": [
+    {
+     "author": "Эдуар Мане",
+     "title": "Флейтист",
+     "year": "1866",
+     "museum": "Музей Орсе, Париж",
+     "image": "https://9251485302im-blip.github.io/gallery/img/189.jpg"
+    },
+    {
+     "author": "Валентин Серов",
+     "title": "Девочка с персиками",
+     "year": "1887",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/121.jpg"
+    },
+    {
+     "author": "Альбрехт Дюрер",
+     "title": "Автопортрет в одежде, отороченной мехом",
+     "year": "1500",
+     "museum": "Старая пинакотека, Мюнхен",
+     "image": "https://9251485302im-blip.github.io/gallery/img/012.jpg"
+    }
+   ]
+  },
+  {
+   "day": 54,
+   "paintings": [
+    {
+     "author": "Томас Гейнсборо",
+     "title": "Мистер и миссис Эндрюс",
+     "year": "ок. 1750",
+     "museum": "Лондонская национальная галерея",
+     "image": "https://9251485302im-blip.github.io/gallery/img/041.jpg"
+    },
+    {
+     "author": "Архип Куинджи",
+     "title": "Берёзовая роща",
+     "year": "1879",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/203.jpg"
+    },
+    {
+     "author": "Иван Айвазовский",
+     "title": "Радуга",
+     "year": "1873",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/197.jpg"
+    }
+   ]
+  },
+  {
+   "day": 55,
+   "paintings": [
+    {
+     "author": "Пьер Огюст Ренуар",
+     "title": "Бал в Мулен де ла Галетт",
+     "year": "1876",
+     "museum": "Музей Орсе, Париж",
+     "image": "https://9251485302im-blip.github.io/gallery/img/073.jpg"
+    },
+    {
+     "author": "Виктор Васнецов",
+     "title": "Витязь на распутье",
+     "year": "1882",
+     "museum": "Русский музей, Санкт-Петербург",
+     "image": "https://9251485302im-blip.github.io/gallery/img/206.jpg"
+    },
+    {
+     "author": "Алексей Венецианов",
+     "title": "На пашне. Весна",
+     "year": "1820-е",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/180.jpg"
+    }
+   ]
+  },
+  {
+   "day": 56,
+   "paintings": [
+    {
+     "author": "Уильям Тёрнер",
+     "title": "Снежная буря: Ганнибал и его армия переходят Альпы",
+     "year": "1812",
+     "museum": "Галерея Тейт, Лондон",
+     "image": "https://9251485302im-blip.github.io/gallery/img/177.jpg"
+    },
+    {
+     "author": "Джузеппе Арчимбольдо",
+     "title": "Вертумн",
+     "year": "1590–1591",
+     "museum": "Замок Скуклостер, Швеция",
+     "image": "https://9251485302im-blip.github.io/gallery/img/152.jpg"
+    },
+    {
+     "author": "Томас Гейнсборо",
+     "title": "Голубой мальчик",
+     "year": "ок. 1770",
+     "museum": "Библиотека Хантингтона, Сан-Марино (Калифорния)",
+     "image": "https://9251485302im-blip.github.io/gallery/img/042.jpg"
+    }
+   ]
+  },
+  {
+   "day": 57,
+   "paintings": [
+    {
+     "author": "Иероним Босх",
+     "title": "Сад земных наслаждений",
+     "year": "ок. 1490–1510",
+     "museum": "Прадо, Мадрид",
+     "image": "https://9251485302im-blip.github.io/gallery/img/011.jpg"
+    },
+    {
+     "author": "Микеланджело Меризи да Караваджо",
+     "title": "Корзина с фруктами",
+     "year": "ок. 1599",
+     "museum": "Пинакотека Амброзиана, Милан",
+     "image": "https://9251485302im-blip.github.io/gallery/img/023.jpg"
+    },
+    {
+     "author": "Винсент Ван Гог",
+     "title": "Цветущие ветки миндаля",
+     "year": "1890",
+     "museum": "Музей Ван Гога, Амстердам",
+     "image": "https://9251485302im-blip.github.io/gallery/img/126.jpg"
+    }
+   ]
+  },
+  {
+   "day": 58,
+   "paintings": [
+    {
+     "author": "Рембрандт ван Рейн",
+     "title": "Синдики цеха суконщиков",
+     "year": "1662",
+     "museum": "Рейксмюсеум, Амстердам",
+     "image": "https://9251485302im-blip.github.io/gallery/img/166.jpg"
+    },
+    {
+     "author": "Кацусика Хокусай",
+     "title": "Южный ветер. Ясный день (Красная Фудзи)",
+     "year": "ок. 1831",
+     "museum": "Ксилография, серия «36 видов Фудзи»",
+     "image": "https://9251485302im-blip.github.io/gallery/img/054.jpg"
+    },
+    {
+     "author": "Исаак Левитан",
+     "title": "Вечерний звон",
+     "year": "1892",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/213.jpg"
+    }
+   ]
+  },
+  {
+   "day": 59,
+   "paintings": [
+    {
+     "author": "Гюстав Курбе",
+     "title": "Отчаявшийся (Автопортрет)",
+     "year": "1843–1845",
+     "museum": "Частное собрание",
+     "image": "https://9251485302im-blip.github.io/gallery/img/182.jpg"
+    },
+    {
+     "author": "Микеланджело Меризи да Караваджо",
+     "title": "Ужин в Эммаусе",
+     "year": "1601",
+     "museum": "Лондонская национальная галерея",
+     "image": "https://9251485302im-blip.github.io/gallery/img/154.jpg"
+    },
+    {
+     "author": "Эгон Шиле",
+     "title": "Портрет Валли",
+     "year": "1912",
+     "museum": "Музей Леопольда, Вена",
+     "image": "https://9251485302im-blip.github.io/gallery/img/228.jpg"
+    }
+   ]
+  },
+  {
+   "day": 60,
+   "paintings": [
+    {
+     "author": "Эдвард Мунк",
+     "title": "Крик",
+     "year": "1893",
+     "museum": "Национальная галерея, Осло",
+     "image": "https://9251485302im-blip.github.io/gallery/img/128.jpg"
+    },
+    {
+     "author": "Иван Шишкин",
+     "title": "Рожь",
+     "year": "1878",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/116.jpg"
+    },
+    {
+     "author": "Михаил Врубель",
+     "title": "Пан",
+     "year": "1899",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/218.jpg"
+    }
+   ]
+  },
+  {
+   "day": 61,
+   "paintings": [
+    {
+     "author": "Илья Репин",
+     "title": "Бурлаки на Волге",
+     "year": "1870–1873",
+     "museum": "Русский музей, Санкт-Петербург",
+     "image": "https://9251485302im-blip.github.io/gallery/img/070.jpg"
+    },
+    {
+     "author": "Микеланджело Буонарроти",
+     "title": "Страшный суд",
+     "year": "1536–1541",
+     "museum": "Сикстинская капелла, Ватикан",
+     "image": "https://9251485302im-blip.github.io/gallery/img/150.jpg"
+    },
+    {
+     "author": "Винсент Ван Гог",
+     "title": "Ирисы",
+     "year": "1889",
+     "museum": "Музей Гетти, Лос-Анджелес",
+     "image": "https://9251485302im-blip.github.io/gallery/img/124.jpg"
+    }
+   ]
+  },
+  {
+   "day": 62,
+   "paintings": [
+    {
+     "author": "Пит Мондриан",
+     "title": "Бродвей буги-вуги",
+     "year": "1942–1943",
+     "museum": "Музей современного искусства (MoMA), Нью-Йорк",
+     "image": "https://9251485302im-blip.github.io/gallery/img/233.jpg"
+    },
+    {
+     "author": "Никола Пуссен",
+     "title": "Аркадские пастухи",
+     "year": "1637–1638",
+     "museum": "Лувр, Париж",
+     "image": "https://9251485302im-blip.github.io/gallery/img/029.jpg"
+    },
+    {
+     "author": "Клод Моне",
+     "title": "Прогулка. Дама с зонтиком",
+     "year": "1875",
+     "museum": "Национальная галерея искусства, Вашингтон",
+     "image": "https://9251485302im-blip.github.io/gallery/img/072.jpg"
+    }
+   ]
+  },
+  {
+   "day": 63,
+   "paintings": [
+    {
+     "author": "Данте Габриэль Россетти",
+     "title": "Прозерпина",
+     "year": "1874",
+     "museum": "Галерея Тейт, Лондон",
+     "image": "https://9251485302im-blip.github.io/gallery/img/071.jpg"
+    },
+    {
+     "author": "Питер Брейгель Старший",
+     "title": "Нидерландские пословицы",
+     "year": "1559",
+     "museum": "Картинная галерея, Берлин",
+     "image": "https://9251485302im-blip.github.io/gallery/img/020.jpg"
+    },
+    {
+     "author": "Джеймс Эббот Мак-Нил Уистлер",
+     "title": "Аранжировка в сером и чёрном № 1 (Портрет матери)",
+     "year": "1871",
+     "museum": "Музей Орсе, Париж",
+     "image": "https://9251485302im-blip.github.io/gallery/img/066.jpg"
+    }
+   ]
+  },
+  {
+   "day": 64,
+   "paintings": [
+    {
+     "author": "Исаак Левитан",
+     "title": "Март",
+     "year": "1895",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/214.jpg"
+    },
+    {
+     "author": "Джон Констебл",
+     "title": "Телега для сена",
+     "year": "1821",
+     "museum": "Лондонская национальная галерея",
+     "image": "https://9251485302im-blip.github.io/gallery/img/051.jpg"
+    },
+    {
+     "author": "Анри де Тулуз-Лотрек",
+     "title": "В «Мулен Руж»",
+     "year": "1892–1895",
+     "museum": "Чикагский институт искусств",
+     "image": "https://9251485302im-blip.github.io/gallery/img/127.jpg"
+    }
+   ]
+  },
+  {
+   "day": 65,
+   "paintings": [
+    {
+     "author": "Неизвестный византийский иконописец",
+     "title": "Владимирская икона Божией Матери",
+     "year": "XII век",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/139.jpg"
+    },
+    {
+     "author": "Микеланджело Меризи да Караваджо",
+     "title": "Призвание апостола Матфея",
+     "year": "1599–1600",
+     "museum": "Сан-Луиджи-деи-Франчези, Рим",
+     "image": "https://9251485302im-blip.github.io/gallery/img/024.jpg"
+    },
+    {
+     "author": "Сандро Боттичелли",
+     "title": "Рождение Венеры",
+     "year": "ок. 1485",
+     "museum": "Галерея Уффици, Флоренция",
+     "image": "https://9251485302im-blip.github.io/gallery/img/008.jpg"
+    }
+   ]
+  },
+  {
+   "day": 66,
+   "paintings": [
+    {
+     "author": "Питер Брейгель Старший",
+     "title": "Вавилонская башня",
+     "year": "1563",
+     "museum": "Музей истории искусств, Вена",
+     "image": "https://9251485302im-blip.github.io/gallery/img/103.jpg"
+    },
+    {
+     "author": "Илья Репин",
+     "title": "Крестный ход в Курской губернии",
+     "year": "1880–1883",
+     "museum": "Третьяковская галерея, Москва",
+     "image": "https://9251485302im-blip.github.io/gallery/img/079.jpg"
+    },
+    {
+     "author": "Рембрандт ван Рейн",
+     "title": "Еврейская невеста",
+     "year": "ок. 1665–1669",
+     "museum": "Рейксмюсеум, Амстердам",
+     "image": "https://9251485302im-blip.github.io/gallery/img/035.jpg"
+    }
+   ]
+  },
+  {
+   "day": 67,
+   "paintings": [
+    {
+     "author": "Пит Мондриан",
+     "title": "Композиция с красным, синим и жёлтым",
+     "year": "1930",
+     "museum": "Кунстхаус, Цюрих",
+     "image": "https://9251485302im-blip.github.io/gallery/img/138.jpg"
+    },
+    {
+     "author": "Рембрандт ван Рейн",
+     "title": "Урок анатомии доктора Тульпа",
+     "year": "1632",
+     "museum": "Маурицхёйс, Гаага",
+     "image": "https://9251485302im-blip.github.io/gallery/img/027.jpg"
+    }
+   ]
+  }
+ ]
+}
