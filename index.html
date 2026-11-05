@@ -26,13 +26,17 @@ body{font-family:var(--body);cursor:none;
 #stage{position:absolute;left:0;right:0;top:0;bottom:0;
   background:radial-gradient(ellipse at 50% 42%,var(--wall-glow) 0%,var(--wall) 62%)}
 .frame{position:absolute;left:3vw;right:3vw;top:5.5vh;bottom:18vh;
-  opacity:0;-webkit-transition:opacity 2.4s ease;transition:opacity 2.4s ease}
+  opacity:0;-webkit-transition:opacity 4s ease-in-out;transition:opacity 4s ease-in-out;
+  will-change:opacity;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden}
 .frame.on{opacity:1}
+.frame.top{z-index:2;-webkit-transition-timing-function:ease-out;transition-timing-function:ease-out}
+.frame.out{-webkit-transition-timing-function:ease-in;transition-timing-function:ease-in}
 .frame img{position:absolute;left:0;top:0;width:100%;height:100%;
   object-fit:contain;max-width:100%;
   -webkit-filter:drop-shadow(0 1.2vh 2.4vh rgba(0,0,0,.65));filter:drop-shadow(0 1.2vh 2.4vh rgba(0,0,0,.65))}
 .label{position:absolute;bottom:3.2vh;max-width:58vw;
-  opacity:0;-webkit-transition:opacity 1.6s ease .9s;transition:opacity 1.6s ease .9s}
+  opacity:0;-webkit-transition:opacity 2.4s ease-in-out;transition:opacity 2.4s ease-in-out;
+  will-change:opacity;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden}
 .label.on{opacity:1}
 .label.left{left:4.5vw;text-align:left}
 .label.right{right:4.5vw;text-align:right}
@@ -47,17 +51,19 @@ body{font-family:var(--body);cursor:none;
   opacity:1;-webkit-transition:opacity 1.2s ease;transition:opacity 1.2s ease}
 #hint.off{opacity:0}
 #hint kbd{font-family:var(--body);border:1px solid var(--label-dim);border-radius:3px;padding:0 .5vh;margin:0 .3vh;color:var(--label-ink)}
-#count{position:absolute;bottom:3.4vh;font-size:1.4vh;color:#5d564c;font-variant-numeric:tabular-nums;letter-spacing:.06em}
-#count.left{left:4.5vw}#count.right{right:4.5vw}
+.count{position:absolute;bottom:3.4vh;font-size:1.4vh;color:#5d564c;font-variant-numeric:tabular-nums;letter-spacing:.06em;
+  opacity:0;-webkit-transition:opacity 2.4s ease-in-out;transition:opacity 2.4s ease-in-out}
+.count.on{opacity:1}
+.count.left{left:4.5vw}.count.right{right:4.5vw}
 @media (max-width:700px){
   .frame{left:12px;right:12px;bottom:22vh}
   .label{max-width:calc(100% - 32px)}
   .label.left,.label.right{left:16px;right:16px;text-align:left}
   .label.right .rule{margin-left:0}
-  #count{display:none}
+  .count{display:none}
   #hint{display:none}
 }
-@media (prefers-reduced-motion:reduce){.frame,.label{-webkit-transition:none;transition:none}}
+@media (prefers-reduced-motion:reduce){.frame,.label,.count{-webkit-transition:none;transition:none}}
 </style>
 </head>
 <body>
@@ -66,13 +72,20 @@ body{font-family:var(--body);cursor:none;
 <div id="stage">
   <div class="frame" id="f0"><img id="i0" alt=""></div>
   <div class="frame" id="f1"><img id="i1" alt=""></div>
-  <div class="label left" id="lab">
-    <div class="author" id="la"></div>
+  <div class="label left" id="lab0">
+    <div class="author" id="la0"></div>
     <div class="rule"></div>
-    <div class="title" id="lt"></div>
-    <div class="meta" id="lm"></div>
+    <div class="title" id="lt0"></div>
+    <div class="meta" id="lm0"></div>
   </div>
-  <div id="count" class="right"></div>
+  <div class="label right" id="lab1">
+    <div class="author" id="la1"></div>
+    <div class="rule"></div>
+    <div class="title" id="lt1"></div>
+    <div class="meta" id="lm1"></div>
+  </div>
+  <div class="count right" id="c0"></div>
+  <div class="count left" id="c1"></div>
   <video id="keep" src="keep.mp4" autoplay muted loop playsinline style="position:absolute;left:0;bottom:0;width:8px;height:8px;opacity:1;pointer-events:none"></video>
   <div id="hint">Смена картины раз в 5 минут &nbsp;·&nbsp; <kbd>◀</kbd><kbd>▶</kbd> листать &nbsp;·&nbsp; <kbd>OK</kbd> скрыть подпись &nbsp;·&nbsp; щелчок — во весь экран</div>
 </div>
@@ -128,22 +141,30 @@ var ART = [{"f": "img/001.jpg", "a": "Андрей Рублёв", "t": "Трои
   function el(id){return document.getElementById(id);}
   function setText(id,s){el(id).textContent=s;}
 
+  /* Подпись: старая плавно гаснет, новая плавно проявляется на другой стороне,
+     когда старая уже погасла и картина почти сменилась. */
+  var SIDE=['left','right'], capToken=0;
   function caption(p){
-    var lab=el('lab'), cnt=el('count');
-    lab.className='label';
+    var old=side, tok=++capToken;
+    side=1-side;
+    el('lab'+old).className='label '+SIDE[old];
+    el('c'+old).className='count '+SIDE[1-old];
+    var s=side;
     setTimeout(function(){
-      side=1-side;
-      setText('la',p.a);
-      setText('lt','«'+p.t+'»');
-      el('lm').innerHTML='';
+      if(tok!==capToken)return;
+      setText('la'+s,p.a);
+      setText('lt'+s,'«'+p.t+'»');
+      var m=el('lm'+s); m.innerHTML='';
       var y=document.createElement('b'); y.textContent=p.y;
-      el('lm').appendChild(y);
-      el('lm').appendChild(document.createTextNode((p.s?'  ·  '+p.s:'')+'  ·  '+p.m));
-      lab.className='label '+(side?'right':'left')+(captionsOn?' on':'');
-      cnt.className=side?'left':'right';
-      cnt.textContent=(pos+1)+' / '+order.length;
-      cnt.style.visibility=captionsOn?'visible':'hidden';
-    },700);
+      m.appendChild(y);
+      m.appendChild(document.createTextNode((p.s?'  ·  '+p.s:'')+'  ·  '+p.m));
+      setText('c'+s,(pos+1)+' / '+order.length);
+      setTimeout(function(){
+        if(tok!==capToken)return;
+        el('lab'+s).className='label '+SIDE[s]+(captionsOn?' on':'');
+        el('c'+s).className='count '+SIDE[1-s]+(captionsOn?' on':'');
+      },60);
+    },2600);
   }
 
   function show(step){
@@ -155,8 +176,9 @@ var ART = [{"f": "img/001.jpg", "a": "Андрей Рублёв", "t": "Трои
     var p=ART[order[pos]];
     var nxt=1-cur, img=el('i'+nxt), tries=0;
     img.onload=function(){
-      el('f'+nxt).className='frame on';
-      el('f'+cur).className='frame';
+      /* новая картина проявляется поверх, старая гаснет под ней — без провала в темноту */
+      el('f'+cur).className='frame out';
+      el('f'+nxt).className='frame top on';
       cur=nxt;
       caption(p);
       preload();
@@ -175,9 +197,8 @@ var ART = [{"f": "img/001.jpg", "a": "Андрей Рублёв", "t": "Трои
 
   function toggleCaptions(){
     captionsOn=!captionsOn;
-    var lab=el('lab');
-    lab.className=lab.className.replace(' on','')+(captionsOn?' on':'');
-    el('count').style.visibility=captionsOn?'visible':'hidden';
+    el('lab'+side).className='label '+SIDE[side]+(captionsOn?' on':'');
+    el('c'+side).className='count '+SIDE[1-side]+(captionsOn?' on':'');
   }
   function fullscreen(){
     var d=document.documentElement, r=d.requestFullscreen||d.webkitRequestFullscreen;
